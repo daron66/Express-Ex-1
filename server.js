@@ -9,9 +9,13 @@ server.use(express.json());
 //contains request
 //used fort route handler function
 //which sets json
-server.get('/', (req, res) => {
+try {
+	server.get('/', (req, res) => {
 	res.json({message: 'OK'});
-});
+	});
+} catch (err) {
+	console.error(err.message);
+}
 
 server.listen(3333, () => console.log('System is listening on port 127.0.0.1:3000'))
 
