@@ -7,7 +7,7 @@ server.use(express.json());
 //match request to route
 //route get path ('/')
 //contains request
-//used fort route handler function
+//used for route handler function
 //which sets json
 try {
         server.get('/', (req, res) => {
